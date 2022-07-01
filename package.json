@@ -4,9 +4,9 @@
   "private": true,
   "description": "Demo app",
   "main": "example.js",
-  "keywords": [
-    "myapp"
-  ],
+  "scripts": {
+    "start": "node ."
+  },
   "dependencies": {
     "oracledb": "^5.1.0"
   },
