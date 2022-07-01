@@ -7,9 +7,10 @@
   "scripts": {
     "start": "node example.js"
   },
+  "author": "",
+  "license": "Apache-2.0",
   "dependencies": {
+    "express": "^4.17.1",
     "oracledb": "^5.1.0"
-  },
-  "author": "You",
-  "license": "MIT"
+  }
 }
