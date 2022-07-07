@@ -2,6 +2,7 @@
 # https://hub.docker.com/_/node
 FROM node:12-slim
 
+<<<<<<< HEAD
 RUN apt-get update && apt-get install -y libaio1 wget unzip
 
 # Create and change to the app directory.
@@ -22,3 +23,21 @@ RUN npm install
 CMD [ "npm","start" ]
 
 #CMD ["sqlplus", "-v"]
+=======
+# Create and change to the app directory.
+WORKDIR /usr/src/app
+
+# Copy application dependency manifests to the container image.
+# A wildcard is used to ensure both package.json AND package-lock.json are copied.
+# Copying this separately prevents re-running npm install on every code change.
+COPY package*.json ./
+
+# Install production dependencies.
+RUN npm install --only=production
+
+# Copy local code to the container image.
+COPY . ./
+
+# Run the web service on container startup.
+CMD [ "npm", "start" ]
+>>>>>>> 5e4fa20143e4676e54de6c26293c1113fa3b6c83
