@@ -1,16 +1,16 @@
 {
-  "name": "Demo",
+  "name": "nodejs-oracle",
   "version": "1.0.0",
   "private": true,
   "description": "Demo app",
-  "main": "example.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node example.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.17.1",
-    "oracledb": "^5.1.0"
+    "oracledb": "^5"
   }
 }
