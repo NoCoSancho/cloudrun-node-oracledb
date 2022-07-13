@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Demo app",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "Apache-2.0",

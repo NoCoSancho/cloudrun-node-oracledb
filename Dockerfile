@@ -13,7 +13,17 @@ RUN wget https://download.oracle.com/otn_software/linux/instantclient/instantcli
     echo /opt/oracle/instantclient* > /etc/ld.so.conf.d/oracle-instantclient.conf && ldconfig
 
 WORKDIR /myapp
-ADD package.json server.js /myapp/
+#ADD package.json services/* config/* db_apis/* controllers/* *.js /myapp/
+RUN mkdir services
+RUN mkdir db_apis
+RUN mkdir controllers
+RUN mkdir config
+
+ADD package.json *.js /myapp/
+ADD services /myapp/services
+ADD config /myapp/config
+ADD db_apis /myapp/db_apis
+ADD controllers /myapp/controllers
 RUN npm install
 
 #CMD exec node server.js
