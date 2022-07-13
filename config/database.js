@@ -1,3 +1,8 @@
+// db connection pool configuration
+// variables passed in for connection string
+// connection pool min/max/increment are static
+// "oraPool" is referenced in other .js files
+
 module.exports = {
   oraPool: {
     user: process.env.NODE_ORACLEDB_USER,
