@@ -1,3 +1,4 @@
+// main entrypoint for app
 const webServer = require('./services/web-server.js');
 const database = require('./services/database.js');
 const dbConfig = require('./config/database.js');
@@ -31,6 +32,7 @@ async function startup() {
   }
 }
 
+// startup the db connection pool and web server
 startup();
 
 async function shutdown(e) {

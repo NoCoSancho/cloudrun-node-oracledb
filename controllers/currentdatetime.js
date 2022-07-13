@@ -1,9 +1,9 @@
-const currentdatetime  = require('../db_apis/oracle-date-time.js');
+// handles get requests for oratest
+const currentdatetime = require('../db_apis/oracle-date-time.js');
 
 async function get(req, res, next) {
   try {
 
-console.log('running get function');
     const rows = await currentdatetime.getcurrentdatetime();
 
     if (req.params.id) {
